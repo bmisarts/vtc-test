@@ -3,17 +3,23 @@
         <app-auth-header></app-auth-header>
         <div class="col-md-4 offset-md-4 justify-content-center">
             <div class="">
-                <form action="" class="pt-5 text-start">
+                <form [formGroup]="loginForm" class="pt-5 text-start">
+                    <div *ngIf="submited && loginForm.invalid" class="alert alert-danger rounded-0" role="alert">
+                        Erreur, accès non autorisé. Votre identifiant ou votre mot de passe est incorrect
+                    </div>
+                    <div *ngIf="submited && !loginForm.invalid" class="alert alert-success rounded-0" role="alert">
+                        Félicitation, vous avez réussi à vous connecter avec succès à votre compte hautement sécurisé privé.
+                    </div>
                     <div class="form-group">
                         <label for="identifiant">Identifiant de l'utilisateur</label>
-                        <input class="form-control rounded-0" type="text" name="identifiant" id="identifiant" placeholder="Votre identifiant">
+                        <input class="form-control rounded-0" type="text" formControlName="identifiant" id="identifiant" placeholder="Votre identifiant">
                     </div>
                     <div class="form-group pt-3">
                         <label for="password">Mot de passe</label>
-                        <input class="form-control rounded-0" type="text" name="password" id="password" placeholder="Votre mot de passe ici">
+                        <input class="form-control rounded-0" type="password" formControlName="password" id="password" placeholder="Votre mot de passe ici">
                     </div>
                     <div class="form-group pt-3">            
-                        <button class="btn btn-primary w-100 my-3 m-0">Se déconnecter</button>
+                        <button class="btn btn-primary w-100 my-3 m-0" [disabled]="submited" (click)="onSubmit()">Se déconnecter</button>
                     </div>
                 </form>
             </div>

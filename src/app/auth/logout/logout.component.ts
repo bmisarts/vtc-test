@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-logout',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./logout.component.scss']
 })
 export class LogoutComponent {
-
+  
 }
