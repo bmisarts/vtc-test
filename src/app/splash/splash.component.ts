@@ -6,5 +6,4 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./splash.component.scss']
 })
 export class SplashComponent {
-  title: string = "SPARTAN";
 }
