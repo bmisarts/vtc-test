@@ -2,9 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SplashComponent } from './splash/splash.component';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './auth/login/login.component';
-import { LogoutComponent } from './auth/logout/logout.component';
 import { WelcomeComponent } from './welcome/welcome.component';
+import { content } from './shared/routes/routes';
 
 const routes: Routes = [
   {
@@ -18,23 +17,21 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'login',
-    component: LoginComponent,
-    pathMatch: 'full',
-  },
-  {
-    path: 'logout',
-    component: LogoutComponent,
-    pathMatch: 'full',
+    path: '',
+    children: content
   },
   {
     path: '**',
     component: AppComponent
-  }
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [[RouterModule.forRoot(routes, {
+      anchorScrolling: 'enabled',
+      scrollPositionRestoration: 'enabled',
+    })],
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
