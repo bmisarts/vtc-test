@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
       sessionStorage.setItem('currentUser', JSON.stringify({ 
         ID: this.loginForm.value["identifiant"], pw: this.loginForm.value["password"] 
       }));
-      setTimeout( () => {
+      setTimeout( () => {      
         this.router.navigate(["/dashboard"])
       }, 5000)
     }
