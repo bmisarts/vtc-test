@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 import { LoginComponent } from "./login/login.component";
 import { LogoutComponent } from "./logout/logout.component";
+import { AuthGuard } from '../shared/guard/auth.guard';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   {
     path: 'logout',
     component: LogoutComponent,
+    canActivate: [AuthGuard],
   }
 ];
 

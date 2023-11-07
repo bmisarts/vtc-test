@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +14,7 @@ export class LoginComponent implements OnInit {
   
   constructor(
     private _formBuilder: FormBuilder,
+    public router: Router
   ){}
   
   
@@ -28,5 +30,14 @@ export class LoginComponent implements OnInit {
   
   onSubmit(){
     this.submited = true;
+    if(this.loginForm.valid){
+      this.loginForm.valueChanges.unsubscribe();
+      sessionStorage.setItem('currentUser', JSON.stringify({ 
+        ID: this.loginForm.value["identifiant"], pw: this.loginForm.value["password"] 
+      }));
+      setTimeout( () => {
+        this.router.navigate(["/dashboard"])
+      }, 5000)
+    }
   }
 }

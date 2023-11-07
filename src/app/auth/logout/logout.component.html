@@ -4,14 +4,14 @@
         <div class="col-md-6 offset-md-3 justify-content-center">
             <div class="card p-5 mt-5">
                 <h4>Tentative de deconnexion</h4>
-                <form action="" class="p-3">
+                <form [formGroup]="logoutForm" class="pt-5 text-start">
                     <p class="text-danger">Veillez vous identifier pour procéder à votre décconexion</p>
                     <div class="form-group">
-                        <input class="form-control text-center text-danger border-danger rounded-0" type="text" name="" id="" placeholder="Entrez votre identifiant unique ici">
+                        <input class="form-control text-center text-danger border-danger rounded-0" type="text" formControlName="identifiant" id="identifiant" placeholder="Entrez votre identifiant unique ici">
                     </div>
                 </form>
             </div>
-            <button class="btn btn-danger w-100 my-3 m-0">Se déconnecter</button>
+            <button class="btn btn-danger w-100 my-3 m-0" [disabled]="submited" (click)="onSubmit()">Se déconnecter</button>
             <span><u>Problèmes de connexion ? <a href=""> cliquez ici !</a></u></span>
         </div>
     </div>

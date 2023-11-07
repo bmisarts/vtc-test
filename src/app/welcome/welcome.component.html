@@ -13,7 +13,14 @@
                 <h3 class="text-primary mt-5">Welcome / Bienvenue</h3>
                 <p>Choose your preferred language / Choisissez votre langue</p>
                 <div class="select mt-5">
-                    <select name="language" id="lang">
+                    <!-- <ng-select [items]="languages" 
+                        class="form-control" 
+                        bindLabel="name"
+                        bindValue="value"
+                        (change)="setLaguage($event)">
+                    </ng-select> -->
+                    <select class="form-select" aria-label="Default select example" name="language" id="lang" (change)="setLaguage($event)">
+                        <option value="">Language/Language</option>
                         <option value="fr">Français</option>
                         <option value="en">English</option>
                     </select>
