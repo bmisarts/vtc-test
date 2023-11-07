@@ -6,6 +6,7 @@ import { NavComponent } from './layout/nav/nav.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { NavRightComponent } from './layout/nav/nav-right/nav-right.component';
+import { SearchComponent } from './layout/nav/search/search.component';
 
 
 
@@ -15,7 +16,8 @@ import { NavRightComponent } from './layout/nav/nav-right/nav-right.component';
     NavComponent,
     FooterComponent,
     SidebarComponent,
-    NavRightComponent
+    NavRightComponent,
+    SearchComponent
   ],
   imports: [
     CommonModule,

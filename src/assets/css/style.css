@@ -133,8 +133,7 @@ u, a {
     justify-content: space-between;
 
 }
-.nav-content{
-    width: 100%;
+.nav-content {
     padding-right: 20px;
     align-items: center;
     margin-left: 20px;
@@ -149,6 +148,21 @@ u, a {
 }
 body.active .wrapper .sidebar{
     left: -225px;
+}
+.nav-right ul {
+    display: flex;
+    align-items: center;
+}
+.nav-right ul li img {
+    width: 50px;
+}
+.nav-right ul li .fa {
+    font-size:20px;
+}
+.search {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
 }
 
 body.active .wrapper .section{
