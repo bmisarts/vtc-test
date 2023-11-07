@@ -7,10 +7,4 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
 
-  toggle() {
-    let menu_toggle = document.querySelector(".menu_toggle");
-    menu_toggle?.addEventListener("click", function(){
-        document.querySelector("body")?.classList.toggle("active");
-    })
-  }
 }
