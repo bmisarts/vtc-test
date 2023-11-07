@@ -7,7 +7,6 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { SplashComponent } from './splash/splash.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { content } from './shared/routes/routes';
 
 @NgModule({
   declarations: [

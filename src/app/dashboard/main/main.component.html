@@ -1,0 +1,31 @@
+<div class="wrapper">
+    <div class="section">
+        <div class="top_navbar">
+            <div class="menu_toggle" (click)="toggle()">
+                <a href="javascript:void(0)">
+                  <i class="fa fa-bars"></i>
+                </a>
+            </div>
+            <app-nav></app-nav>
+        </div>
+        <div class="container">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            
+            <router-outlet></router-outlet>
+        </div>
+        
+        <div class="footer">
+            <app-footer></app-footer>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="logos">
+            <img src="assets/images/logo.png">
+            <img src="assets/images/logo_sn.png">
+        </div>
+        <app-sidebar></app-sidebar>
+    </div>
+    
+</div>

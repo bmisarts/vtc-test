@@ -1,3 +1,16 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+body{
+    background-color: #434343;
+    color: #e3e3e3;
+}
+
 .splash {
     width: 100%;
     height: 100vh;
@@ -11,12 +24,6 @@
     background-image: url("src/assets/images/auth_background_images.jpeg");
     background-size: auto 100%;
     background-repeat: repeat;
-}
-/* Responsive */
-@media screen and (max-width: 600px) {
-    .auth-container {
-        background-size: 100% auto;
-    }
 }
 .auth-content {
     width: 100%;
@@ -56,4 +63,103 @@ u, a {
 
 .legal-botom{
     margin-top: 80px;
+}
+.wrapper .sidebar{
+    width: 225px;
+    background-color: #525252;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease;
+}
+.wrapper .sidebar .logos{
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    border-bottom: 2px solid #e3e3e3;
+}
+.wrapper .sidebar .logos img{
+    display: block;
+    width: 65px;
+    height: auto;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.wrapper .sidebar ul {
+    padding: 50px 10px 0 10px;
+}
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 15px;
+    /* border-bottom: 1px solid #434343; */
+    font-size: 16px;
+    position: relative;
+    margin: 10px;
+    max-width: 100%;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #e3e3e3;
+    width: 30px;
+    display: inline-block;
+}
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    background: #00b579;
+    COLOR: white;
+    border-right: 2px solid #434343;
+    border-radius: 7PX;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+.wrapper .section{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+}
+
+.wrapper .section .top_navbar{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: 2px solid #e3e3e3;
+
+}
+.nav-content{
+    width: 100%;
+    padding-right: 20px;
+    align-items: center;
+}
+.wrapper .section .top_navbar .menu_toggle a{
+    font-size: 28px;
+    color: #f4fbff;
+}
+
+.wrapper .section .top_navbar .menu_toggle a:hover{
+    color: #a2ecff;
+}
+body.active .wrapper .sidebar{
+    left: -225px;
+}
+
+body.active .wrapper .section{
+    margin-left: 0;
+    width: 100%;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+}
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .auth-container {
+        background-size: 100% auto;
+    }
 }

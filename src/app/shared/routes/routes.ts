@@ -6,7 +6,7 @@ export const content: Routes = [
     loadChildren: () => import("../../auth/auth.module").then((m) => m.AuthModule),
   },
   {
-    path: "dashbord",
-    loadChildren: () => import("../../dashbord/dashbord.module").then((m) => m.DashbordModule),
+    path: "dashboard",
+    loadChildren: () => import("../../dashboard/dashboard.module").then((m) => m.DashboardModule),
   },
 ];
