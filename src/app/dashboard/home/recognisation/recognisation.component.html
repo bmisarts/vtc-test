@@ -1,0 +1,39 @@
+<div class="card h-100">
+    <div class="header">
+        <h6>Image/Facial Recognition/Search</h6>
+        <i class="fa fa-ellipsis-v"></i>
+     </div>
+    <div class="row card-body align-items-center justify-content-between text-start p-0">
+        <div class="col-md-4">
+            <h6>Completed</h6>
+        </div>
+        <div *ngFor="let comp of completed" class="col-md-2 p-0">
+            <div class="recognisation text-success">
+                <img src="{{ comp.image }}" alt="">
+                <i class="fa fa-check-circle-o"></i>
+            </div>
+        </div>
+    </div>
+    <div class="row card-body align-items-center justify-content-between text-start p-0">
+        <div class="col-md-4">
+            <h6>In Progress</h6>
+        </div>
+        <div *ngFor="let comp of completed" class="col-md-2 p-0">
+            <div class="recognisation text-secondary">
+                <img src="{{ comp.image }}" alt="">
+                <i class="fa fa-repeat"></i>
+            </div>
+        </div>
+    </div>
+    <div class="row card-body align-items-center justify-content-between text-start p-0">
+        <div class="col-md-4">
+            <h6>Not Found</h6>
+        </div>
+        <div *ngFor="let comp of completed" class="col-md-2 p-0">
+            <div class="recognisation text-danger">
+                <img src="{{ comp.image }}" alt="">
+                <i class="fa fa-times-circle-o"></i>
+            </div>
+        </div>
+    </div>
+</div>

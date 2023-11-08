@@ -1,0 +1,19 @@
+<div class="card h-100">
+    <div class="header">
+        <h6>news update</h6>
+        <i class="fa fa-ellipsis-v"></i>
+     </div>
+    <div class="card-body text-start p-0 pt-3">
+        <div *ngFor="let obj of objs" class="row d-flex align-items-berween pt-2">
+            <div class="w-75">
+                <p class="text-truncate mb-0">{{ obj.id }}</p>
+                <span class="text-truncate">{{ obj.name }}</span>
+            </div>
+            <div class="w-25 text-end">
+                <p class="text-truncate mb-0">{{ datePipe.transform( obj.date, 'HH:mm') }}
+                </p>
+                <p class="text-truncate">{{ datePipe.transform( obj.date, 'dd/MM/yyyy') }}</p>
+            </div>
+        </div>
+    </div>
+</div>
