@@ -1,4 +1,13 @@
 ::placeholder {
     color: red;
     opacity: 1; /* Firefox */
-  }
+}
+
+.card, .btn {
+  border-radius: 0%;
+}
+
+.card {
+  background-color: #f4f0f0;
+  color: #434343;
+}

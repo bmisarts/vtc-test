@@ -10,7 +10,6 @@ body{
     background-color: #434343;
     color: #e3e3e3;
 }
-
 .splash {
     width: 100%;
     height: 100vh;
@@ -58,7 +57,7 @@ a {
     text-decoration: none;
 }
 u, a {
-    color: rgb(244, 240, 240);
+    color: #f4f0f0;
 }
 
 .legal-botom{
@@ -68,7 +67,10 @@ u, a {
     width: 225px;
     background-color: #525252;
     min-height: 100vh;
-    position: absolute;
+    position: fixed;
+    overflow: hidden;
+    overflow-y: scroll;
+    bottom: 0;
     top: 0;
     left: 0;
     transition: all 0.5s ease;
@@ -79,7 +81,20 @@ u, a {
     align-items: center;
     display: flex;
     border-bottom: 2px solid #e3e3e3;
+    position: fixed;
+    width: 225px;
+    background-color: #525252;
+    top: 0;
 }
+.wrapper .sidebar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .wrapper .sidebar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 .wrapper .sidebar .logos img{
     display: block;
     width: 65px;
@@ -89,7 +104,7 @@ u, a {
 }
 
 .wrapper .sidebar ul {
-    padding: 50px 10px 0 10px;
+    padding: 140px 10px 0 10px;
 }
 .wrapper .sidebar ul li a{
     display: block;
@@ -126,12 +141,19 @@ u, a {
 
 .wrapper .section .top_navbar{
     height: 90px;
+    width: calc(100% - 225px);
     display: flex;
     padding: 0 30px;
     border-bottom: 2px solid #e3e3e3;
     align-items: center;
     justify-content: space-between;
+    position: fixed;
+    background-color: #434343;
+    top: 0;
 
+}
+.app_home{
+    padding-top: 90px;
 }
 .nav-content {
     padding-right: 20px;
@@ -164,14 +186,52 @@ body.active .wrapper .sidebar{
     align-items: center;
     margin-left: 30px;
 }
+.card{
+    background-color: #525252;
+    color: #f4f0f0;
+    padding: 15px;
+    margin-bottom: 20px;
+    /* align-items: center; */
+}
 
+.card .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card span, .card p, .welcome-actions span{
+    font-size: 13px;
+}
+.card-b-left{
+    border-left: 5px solid #00b579;
+}
+.card_recognisation{
+    justify-content: center;
+}
+.welcome-actions span{
+    margin-left: 10px;
+}
+.recognisation{
+    display: block;
+    text-align: center;
+}
+.recognisation img {
+    width: 100%;
+    transform: translateY(35%);
+    height: auto;
+}
+.recognisation i {
+    transform: translateY(-35%);
+    width: 15%;
+}
 body.active .wrapper .section{
     margin-left: 0;
     width: 100%;
 }
 .footer{
-    position: absolute;
-    bottom: 0;
+    width: 100%;
+    /* position: fixed; */
+    /* bottom: 0; */
 }
 /* Responsive */
 @media screen and (max-width: 600px) {
